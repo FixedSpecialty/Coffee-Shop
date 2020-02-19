@@ -11,10 +11,6 @@
 				<input type="text" name="lastname"></div>
 			      <input type="submit" value="Submit">
 		</form>
-		<?php
-		      echo "<pre>" . print_r($_POST,1) . "</pre>";
-			      file_put_contents("contnets.dat", $_POST, FILE_APPEND | LOCK_EX);
-		?>
 	</body>
 
 </html>

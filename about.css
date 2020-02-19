@@ -1,0 +1,26 @@
+#sitetitle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#holderpic {
+   float: left;
+   margin-right: 50px;
+   margin-bottom: 100px;
+}
+.menucontainer {
+    text-align: center;
+}
+#menutitle {
+    display: inline-block;
+    }
+
+#righticons {
+text-align: right;
+margin-top: -20px;
+}
+p {
+    margin-left: 50px;
+    margin-right: 50px;
+}

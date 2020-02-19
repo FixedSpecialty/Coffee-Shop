@@ -1,0 +1,47 @@
+#sitetitle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.menucontainer {
+    text-align: center;
+}
+#menutitle {
+    display: inline-block;
+    }
+#righticons {
+text-align: right;
+margin-top: -20px;
+}
+.stocktable{
+    border-collapse:collapse;
+    border-spacing:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stocktable td{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+.stocktable th{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+.stocktable .tablecell{
+    text-align:left;
+    vertical-align:top;
+}

@@ -1,0 +1,16 @@
+#sitetitle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.menucontainer {
+    text-align: center;
+}
+#menutitle {
+    display: inline-block;
+    }
+#righticons {
+text-align: right;
+margin-top: -20px;
+}
