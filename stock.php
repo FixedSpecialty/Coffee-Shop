@@ -4,22 +4,9 @@
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="stock.css">
 </head>
-<body>
-    <a href="home.html">
-        <img id = sitetitle src="neckarlogo.jpg" />
-    </a>
-    <div class=menucontainer>
-        <div id = menutitle>
-            <a href="shop.html">Shop    </a>	|		
-            <a href="stock.html">Stock   </a>	|		
-            <a href="about.html">About  </a>	|
-            <a href="membership.html">Membership</a>		
-        </div>	
-        <div id = righticons >
-                <a href = "login.html"> <img src ="loginicon.png" width="25px" height="25px" ></a>
-                <a href = "checkout.html"> <img src ="cart.png" width="25px" height="25px"></a>  
-        </div>
-    </div>
+<?php
+require_once('header.php');
+?>
     <hr>
         <table class="stocktable">
           <tr>
@@ -67,7 +54,9 @@
         </table>
         <div>
           <hr>
-          <div> This will be the footer COPYRIGHT 2020</div>
+<?php
+require_once('footer.php');
+?>
         </div>
 </body>
 </html>

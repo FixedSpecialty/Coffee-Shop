@@ -1,1 +1,58 @@
-<?php include_once("home.html"); ?>
+<html>
+<header><title>Neckar Coffee</title></header>
+<head>
+     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+     <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<?php
+require_once('header.php');
+?>
+<!--<body>
+     <a href="home.php">
+     <img id = sitetitle src="neckarlogo.jpg" />
+     </a>
+<div class=menucontainer>
+ <div id = menutitle>
+           <a href="shop.php">Shop    </a>        |
+           <a href="stock.php">Stock   </a>       |
+           <a href="about.php">About  </a>        |
+           <a href="membership.php">Membership</a>
+       </div>
+       <div id = righticons >
+     <a href = "login.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
+     <a href = "checkout.php"> <img src ="cart.png" width="25px" height="25px"></a>
+      </div>
+</div>-->
+<hr>
+	<a href="membership.php">
+		<img id = holderpic src="placeholder.png"/>
+		<div id = holdercaption> Join Our Club 
+	</a>
+	<div id="images">
+		<a href="coffee1.php">
+			<img class =coffees src="placeholder.png" width="100px" height="100px">
+			<div class="caption">Coffee 1</div>
+		</a>
+		<a href="coffee2.php">
+			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
+			<div class="caption">Coffee 2</div>
+		</a>
+		<a href="coffee3.php">
+			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
+			<div class="caption">Coffee 3</div>
+		</a>
+	</div>
+
+	<a href="about.php">
+	<img id = holderpic src="placeholder.png"/>
+	<div id = holdercaption> About Us
+	</a>
+<div>
+	<hr>
+	<?php
+require_once('footer.php');
+?>
+</div>
+</body>
+</html>
+

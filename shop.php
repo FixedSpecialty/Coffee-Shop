@@ -4,61 +4,50 @@
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="shop.css">
 </head>
-<body>
-    <a href="home.html">
-        <img id = sitetitle src="neckarlogo.jpg" />
-    </a>
-    <div class=menucontainer>
-        <div id = menutitle>
-            <a href="shop.html">Shop    </a>	|		
-            <a href="stock.html">Stock   </a>	|		
-            <a href="about.html">About  </a>	|
-            <a href="membership.html">Membership</a>
-        </div>	
-        <div id = righticons >
-                <a href = "login.html"> <img src ="loginicon.png" width="25px" height="25px" ></a>
-                <a href = "checkout.html"> <img src ="cart.png" width="25px" height="25px"></a>  
-        </div>
-    </div>	
+<?php
+require_once('header.php');
+?>	
     <hr>
     
     <h2 id = holdercaption> Coffee </h2>
     <div id="images">
-		<a href="coffee1.html">
+		<a href="coffee1.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px">
 			<div class="caption">Coffee 1</div>
 		</a>
-		<a href="coffee2.html">
+		<a href="coffee2.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
 			<div class="caption">Coffee 2</div>
 		</a>
-		<a href="coffee3.html">
+		<a href="coffee3.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
 			<div class="caption">Coffee 3</div>
 		</a>
     </div>
     <h2 id = holdercaption> Merchandise </h2>
     <div id="images">
-		<a href="merch1.html">
+		<a href="merch1.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px">
 			<div class="caption">Merch 1</div>
 		</a>
-		<a href="merch2.html">
+		<a href="merch2.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
 			<div class="caption">Merch 2</div>
 		</a>
-		<a href="merch3.html">
+		<a href="merch3.php">
 			<img class =coffees src="placeholder.png" width="100px" height="100px"> 
 			<div class="caption">Merch 3</div>
 		</a>
     </div>
-    <a href="membership.html">
+    <a href="membership.php">
 	<img id = holderpic src="placeholder.png"/>
 	<div id = holdercaption> Join Our Club </div>
 	</a>
 	<div>
 		<hr>
-		<div> This will be the footer COPYRIGHT 2020</div>
+<?php
+require_once('footer.php');
+?>
 	</div>
 </body>
 </html>
