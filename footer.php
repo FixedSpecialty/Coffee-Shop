@@ -2,7 +2,7 @@
    <link rel="stylesheet" type="text/css" href="footer.css">
    
   <div class="copyright">
-    <p>&copy 2013 - Organisation</p>
+    <p>&copy 2020 - Coffeeshop</p>
   </div>
   <div class="social">
     <a href="#" class="support">Contact Us</a>

@@ -15,7 +15,7 @@
         </div>
         <div id = righticons >
                 <div id="logout"><a href="logout.php">logout</a></div>
-                        <a href = "Profile.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
+                        <a href = "profile.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
                         <a href = "checkout.php"> <img src ="cart.png" width="25px" height="25px"></a>
         </div>
 	</div>
