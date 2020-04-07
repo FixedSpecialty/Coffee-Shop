@@ -45,3 +45,23 @@ margin-top: -20px;
     text-align:left;
     vertical-align:top;
 }
+.close_error {
+    float:right;
+  }
+  
+.close_error:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+.error {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    width: 300px;
+ }
+  
+.delete {
+    color: red;
+}
+  

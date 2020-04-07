@@ -1,26 +1,18 @@
 <?php
 include('Dao.php');
   session_start();
-
+  $Dao = new Dao();
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $pdo = $Dao->getConnection();
-  function emailExists($pdo, $email) {
-    $stmt = $pdo->prepare("SELECT 1 FROM users WHERE email=?");
-    $stmt->execute([$email]); 
-    return $stmt->fetchColumn();
-  }
+  $connection = $Dao->getConnection();
 
-if (emailExists($pdo, $email)) {
-    // found
-}
-
-
-  $email = "andremurphy98@outlook.com";
-  $password = "tempPASS";
-
-  if ($email == $_POST['email'] && $password == $_POST['password']) {
+$stmt = $connection->prepare("SELECT * FROM members WHERE email = ?");
+$stmt->execute([$_POST['email']]);
+$user = $stmt->fetch();
+  if ($user && password_verify($_POST['password'], $user['password']))
+  {
     $_SESSION['auth'] = true;
+    $_SESSION['id'] = $user['id'];
     header("Location: http://localhost/cs401/CS401/profile.php");
     exit;
   } else {
@@ -28,3 +20,16 @@ if (emailExists($pdo, $email)) {
     $_SESSION['message'] = "Invalid email or password";
     header("Location: http://localhost/cs401/CS401/login.php");
   }
+  
+
+ 
+
+  // if ($email == $_POST['email'] && $password == $_POST['password']) {
+  //   $_SESSION['auth'] = true;
+  //   header("Location: http://localhost/cs401/CS401/profile.php");
+  //   exit;
+  // } else {
+  //   $_SESSION['auth'] = false;
+  //   $_SESSION['message'] = "Invalid email or password";
+  //   header("Location: http://localhost/cs401/CS401/login.php");
+  // }

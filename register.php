@@ -10,24 +10,25 @@ require_once('header.php');
 ?>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="comment.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
   </head>
-  <body>
-    <h1>Please log in</h1>
-    <?php
-    if (isset($_SESSION['message'])) {
-      echo "<div id='error'>{$_SESSION['message']}</div>";
-      unset($_SESSION['messsage']);
+  <?php
+    if (isset($_SESSION['errors'])) {
+      foreach ($_SESSION['errors'] as $error) {
+         echo "<div id='error'>{$error}</div>";
+      }
+      unset($_SESSION['error']);
     }
     ?>
-    <form action="login_handler.php" method="post">
+  <body>
+    <h1>Create an Account</h1>
+    <form action="register_handler.php" method="post">
+    <div><label for="first">First Name:<input type="textbox" id="first" name="first" /></div>
+    <div><label for="last">Last Name:<input type="textbox" id="last" name="last" /></div>
       <div><label for="email">Email:<input type="textbox" id="email" name="email" /></div>
         <div><label for="password">Password:<input type="password" id="password" name="password" /></div>
           <div><input type="submit"/></div>
 	</form>
-  <div id = button>
-                <a href="register.php">Register Now</a>
-        </div>
 	<?php
   include_once("footer.php")
 ?>

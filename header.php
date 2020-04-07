@@ -1,4 +1,5 @@
 <head>
+<?php session_start(); ?>
   <link rel="stylesheet" href="header.css">
 </head>
 <body>
@@ -13,7 +14,8 @@
                 <a href="membership.php">Membership</a>
         </div>
         <div id = righticons >
-                        <a href = "login.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
+                <div id="logout"><a href="http://localhost/cs401/CS401/logout.php">logout</a></div>
+                        <a href = "profile.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
                         <a href = "checkout.php"> <img src ="cart.png" width="25px" height="25px"></a>
         </div>
 	</div>
