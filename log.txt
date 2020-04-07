@@ -62,3 +62,7 @@
 2020-04-07 3:25:14 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
 2020-04-07 3:29:39 - INFO  --> Saving a User in Database[audrey, schwabe, andremurphy98@gmail.com, $2y$10$3CCai4yJ3smhakdNVa09PO/KCOKxPqHGBZgg1cyUZwk9yyapr8qH6] 
 2020-04-07 3:29:40 - INFO  --> creating a user[audrey,schwabe,andremurphy98@gmail.com,tempPASS] 
+2020-04-07 3:43:49 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
+2020-04-07 3:43:53 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
+2020-04-07 3:43:56 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
+2020-04-07 3:43:58 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
