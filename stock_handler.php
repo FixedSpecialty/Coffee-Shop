@@ -45,7 +45,10 @@ include('Dao.php');
   if (strlen($_POST['elevation']) > 256) {
     $errors[] = "Error, elevation can only be 256 characters long";
   }
-
+  if (!preg_match('/^[0-9]+$/', $_POST['elevation']))
+{
+  $errors[] = "Error, elevation can only be numbers";
+}
   if (strlen($_POST['elevation']) ==  0) {
     $errors[] = "Error, please enter an elevation";
   }

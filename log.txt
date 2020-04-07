@@ -66,3 +66,5 @@
 2020-04-07 3:43:53 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
 2020-04-07 3:43:56 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
 2020-04-07 3:43:58 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
+2020-04-07 3:53:30 - INFO  --> deleting stock with id [31] 
+2020-04-07 3:53:40 - INFO  --> approved admin priveledge[andremurphy98@outlook.com] 
