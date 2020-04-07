@@ -14,7 +14,7 @@
                 <a href="membership.php">Membership</a>
         </div>
         <div id = righticons >
-                <div id="logout"><a href="http://localhost/cs401/CS401/logout.php">logout</a></div>
+                <div id="logout"><a href="logout.php">logout</a></div>
                         <a href = "profile.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
                         <a href = "checkout.php"> <img src ="cart.png" width="25px" height="25px"></a>
         </div>

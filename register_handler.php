@@ -33,12 +33,12 @@ include('Dao.php');
   }
     if (0 < count($stockerr)) {
       $_SESSION['errors'] = $stockerr;
-      header("Location: http://localhost/cs401/CS401/register.php");
+      header("Location: register.php");
       exit;
     }
     $Dao->saveUser(htmlspecialchars($_POST['first']),htmlspecialchars($_POST['last']),$_POST['email'],password_hash($_POST['password'], PASSWORD_DEFAULT));
     $logger->LogInfo("creating a user[{$_POST['first']},{$_POST['last']},{$_POST['email']},{$_POST['password']}]");
-    header("Location: http://localhost/cs401/CS401/login.php");
+    header("Location: login.php");
     exit;
 
  

@@ -8,7 +8,7 @@
 include_once('header.php');
 if ($_SESSION["auth"] == FALSE) {
      echo "FALSE";
-     header("Location: http://localhost/cs401/CS401/login.php");
+     header("Location: login.php");
     exit;
 }
     ?>

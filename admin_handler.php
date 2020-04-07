@@ -11,10 +11,10 @@ include('Dao.php');
 
   if ($email == $_POST['email'] && $password == $_POST['password']) {
     $_SESSION['auth'] = true;
-    header("Location: http://localhost/cs401/CS401/profile.php");
+    header("Location: profile.php");
     exit;
   } else {
     $_SESSION['auth'] = false;
     $_SESSION['message'] = "Invalid email or password";
-    header("Location: http://localhost/cs401/CS401/login.php");
+    header("Location: login.php");
   }
