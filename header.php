@@ -3,20 +3,26 @@
   <link rel="stylesheet" href="header.css">
 </head>
 <body>
-        <a href="home.php">
-        <img id = sitetitle src="neckarlogo.jpg" />
-        </a>
-<div class=menucontainer>
-        <div id = menutitle>
-                <a href="shop.php">Shop    </a>        |
-                <a href="stock.php">Stock   </a>       |
-                <a href="about.php">About  </a>        |
-                <a href="membership.php">Membership</a>
-        </div>
-        <div id = righticons >
-                <div id="logout"><a href="logout.php">logout</a></div>
-                        <a href = "Profile.php"> <img src ="loginicon.png" width="25px" height="25px" ></a>
-                        <a href = "checkout.php"> <img src ="cart.png" width="25px" height="25px"></a>
-        </div>
-	</div>
+
+<div class= "header">
+<a href="home.php">
+<h1>Coffee Shop</h1>
+</a>
+<nav class="dropdownmenu">
+<ul>
+        
+        
+        <li> <a href = "checkout.php"> Cart</li></a>
+        <li> <a href = "Profile.php"> Profile</a>
+                <ul id = "submenu">
+                <li> <a href="logout.php">Logout</a></li>
+                </ul>
+</li>
+        <li> <a href="membership.php">Membership</a></li>
+        <li> <a href="about.php">About</a></li>
+        <li> <a href="stock.php">Stock</a></li>
+        <li><a href="shop.php">Shop</a></li>
+</ul>        
+</nav>
+</div>
 

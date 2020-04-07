@@ -50,18 +50,18 @@ $stmt->execute([$_SESSION['id']]);
 $user = $stmt->fetch();
      if(!empty($user['admin'])) : ?>
     <h1>Add Stock</h1>
-    <form method="POST" action="stock_handler.php" enctype="multipart/form-data">
-      <div>Origin: <input value="<?php echo $origin_preset; ?>" type="text" id="origin" name="origin"></div>
-      <div>Varietal: <input value="<?php echo $varietal_preset; ?>" type="text" id="varietal" name="varietal"></div>
-      <div>Roaster: <input value="<?php echo $roaster_preset; ?>" type="text" id="roaster" name="roaster"></div>
-      <div>Elevation: <input value="<?php echo $elevation_preset; ?>" type="text" id="elevation" name="elevation"></div>
-      <div>Notes: <input value="<?php echo $notes_preset?>" type="text" id="notes" name="notes"></div>
-      <div>Stock: <input value="<?php echo $stock_preset; ?>" type="text" id="stock" name="stock"></div>
+    <form class = "form-css" method="POST" action="stock_handler.php" enctype="multipart/form-data">
+      <div class = "text-left">Origin: <input value="<?php echo $origin_preset; ?>" type="text" id="origin" name="origin"></div>
+      <div class = "text-left">Varietal: <input value="<?php echo $varietal_preset; ?>" type="text" id="varietal" name="varietal"></div>
+      <div class = "text-left">Roaster: <input value="<?php echo $roaster_preset; ?>" type="text" id="roaster" name="roaster"></div>
+      <div class = "text-left">Elevation: <input value="<?php echo $elevation_preset; ?>" type="text" id="elevation" name="elevation"></div>
+      <div class = "text-left">Notes: <input value="<?php echo $notes_preset?>" type="text" id="notes" name="notes"></div>
+      <div class = "text-left">Stock: <input value="<?php echo $stock_preset; ?>" type="text" id="stock" name="stock"></div>
         <input type="submit" value="Submit">
     </form>
      <?php endif;  ?>
      <?php endif;  ?>
-        <table>
+        <table class = "table-fill">
       <thead>
         <tr>
           <th>Origin</th>
@@ -72,14 +72,14 @@ $user = $stmt->fetch();
           <th>Stock</th>
        </tr>
       </thead>
-      <tbody>
+      <tbody class = "table-hover">
       <?php
          $lines = $dao->getStock();
   if (is_null($lines)) {
         echo "There was an error.";
   } else {
          foreach ($lines as $line) {
-           echo "<tr><td>{$line['origin']}</td><td>{$line['varietal']}</td><td>{$line['roaster']}</td><td>{$line['elevation']}</td><td>{$line['notes']}</td><td>{$line['stock']}</td></tr>";
+           echo "<tr><td class = \"text-left\">{$line['origin']}</td><td class = \"text-left\">{$line['varietal']}</td><td class =\"text-left\">{$line['roaster']}</td><td class = \"text-left\">{$line['elevation']}</td><td class = \"text-left\">{$line['notes']}</td><td class = \"text-left\">{$line['stock']}</td></tr>";
           }
       }
       ?>

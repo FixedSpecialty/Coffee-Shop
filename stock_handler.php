@@ -9,18 +9,17 @@ include('Dao.php');
 
   // validate
   $origin = $_POST['origin'];
-  if(!ctype_alpha($origin)) {
-    $errors[] = "Error, alpha characters only in the origin";
-  }
-
-  if (strlen($_POST['origin']) > 70) {
-    $errors[] = "Error, origin can only be 70 characters long";
+  if(!preg_match('/^[A-Za-z\s]{0,20}$/', $_POST['origin'])) {
+    $errors[] = "Error, letters only in the origin";
   }
 
   if (strlen($_POST['origin']) ==  0) {
     $errors[] = "Error, please enter an origin";
   }
 
+  if(!preg_match('/^[A-Za-z0-9\s]{0,20}+$/', $_POST['origin'])) {
+    $errors[] = "Error, letters and numbers only in the origin";
+  }
   if (strlen($_POST['varietal']) > 20) {
     $errors[] = "Error, varietal can only be 20 characters long";
   }
@@ -29,41 +28,35 @@ include('Dao.php');
     $errors[] = "Error, please enter an varietal";
   }
 
-  $roaster = $_POST['roaster'];
-  if(!ctype_alpha($roaster)) {
-    $errors[] = "Error, alpha characters only in the roaster";
-  }
-
-  if (strlen($_POST['roaster']) > 80) {
-    $errors[] = "Error, roaster can only be 80 characters long";
+  if(!preg_match('/^[A-Za-z0-9\s]{0,30}+$/', $_POST['roaster'])) {
+    $errors[] = "Error, letters and numbers only for roaster";
   }
 
   if (strlen($_POST['roaster']) ==  0) {
     $errors[] = "Error, please enter an roaster";
   }
 
-  if (strlen($_POST['elevation']) > 256) {
-    $errors[] = "Error, elevation can only be 256 characters long";
-  }
-  if (!preg_match('/^[0-9]+$/', $_POST['elevation']))
+  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['elevation']))
 {
-  $errors[] = "Error, elevation can only be numbers";
+  $errors[] = "Error, elevation cannot have special chars";
 }
   if (strlen($_POST['elevation']) ==  0) {
     $errors[] = "Error, please enter an elevation";
   }
 
-  if (strlen($_POST['notes']) > 256) {
-    $errors[] = "Error, notes can only be 256 characters long";
-  }
+  if (!preg_match('/^[0-9A-Za-z\.\,\s]{0,256}$/', $_POST['notes']))
+{
+  $errors[] = "Error, notes cannot have special chars besides .,";
+}
 
   if (strlen($_POST['notes']) ==  0) {
     $errors[] = "Error, please enter an notes";
   }
 
-  if (strlen($_POST['stock']) > 256) {
-    $errors[] = "Error, stock can only be 256 characters long";
-  }
+  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['stock']))
+{
+  $errors[] = "Error, stock cannot have special chars";
+}
 
   if (strlen($_POST['stock']) ==  0) {
     $errors[] = "Error, please enter an stock";

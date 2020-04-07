@@ -43,6 +43,7 @@ $user = $stmt->fetch();
               <th>Elevation</th>
               <th>Notes</th>
               <th>Stock</th>
+              <th>Delete</th>
            </tr>
           </thead>
           <tbody>";
