@@ -13,7 +13,7 @@ $user = $stmt->fetch();
   {
     $_SESSION['auth'] = true;
     $_SESSION['id'] = $user['id'];
-    header("Location: profile.php");
+    header("Location: Profile.php");
     exit;
   } else {
     $_SESSION['auth'] = false;
