@@ -3,15 +3,18 @@
 <header><title>Neckar Coffee</title></header>
 <head>
      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-     <link rel="stylesheet" type="text/css" href="home.css">
+     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <?php
 require_once('header.php');
 ?>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
   </head>
+  <body>
+  <div class = "login-page">
+  <div class = "form">
   <?php
     if (isset($_SESSION['errors'])) {
       foreach ($_SESSION['errors'] as $error) {
@@ -20,15 +23,17 @@ require_once('header.php');
       unset($_SESSION['error']);
     }
     ?>
-  <body>
-    <h1>Create an Account</h1>
-    <form action="register_handler.php" method="post">
-    <div><label for="first">First Name:<input type="textbox" id="first" name="first" /></div>
-    <div><label for="last">Last Name:<input type="textbox" id="last" name="last" /></div>
-      <div><label for="email">Email:<input type="textbox" id="email" name="email" /></div>
-        <div><label for="password">Password:<input type="password" id="password" name="password" /></div>
-          <div><input type="submit"/></div>
-	</form>
+
+    <form class = "login-form" action="register_handler.php" method="post">
+    <input type="text" placeholder="first" id="first" name="first" />
+    <input type="text" placeholder="last"  id="last" name="last" />
+    <input type="text" placeholder="email"  id="email" name="email" />
+    <input type="password" placeholder="password"  id="password" name="password" />
+    <input type="submit"/>
+    <p class = "message"> Already have an account? <a href="login.php">Sign in</a></p>
+  </form>
+  </div>
+  </div>
 	<?php
   include_once("footer.php")
 ?>

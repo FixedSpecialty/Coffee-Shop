@@ -15,7 +15,9 @@
         <li> <a href = "checkout.php"> Cart</li></a>
         <li> <a href = "Profile.php"> Profile</a>
                 <ul id = "submenu">
+                        <?php if(isset($_SESSION['auth'])) :?>
                 <li> <a href="logout.php">Logout</a></li>
+                        <?php endif;?>
                 </ul>
 </li>
         <li> <a href="membership.php">Membership</a></li>

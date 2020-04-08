@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 .form .button:hover,.form .button:active,.form .button:focus {
-  background: #42CAFD;
+  background: #F6EFA6;
 }
 .form .message {
   margin: 15px 0 0;
@@ -89,7 +89,7 @@
   color: #EF3B3A;
 }
 body {
-  background: #E8D7FF; /* fallback for old browsers */
+  background: #F6EFA6; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      

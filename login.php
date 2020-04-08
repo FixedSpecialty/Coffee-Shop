@@ -3,7 +3,7 @@
 <header><title>Neckar Coffee</title></header>
 <head>
      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-     <link rel="stylesheet" type="text/css" href="home.css">
+     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <?php
 require_once('header.php');
@@ -13,21 +13,23 @@ require_once('header.php');
     <link rel="stylesheet" type="text/css" href="comment.css">
   </head>
   <body>
-    <h1>Please log in</h1>
+    <div class = "login-page">
+      <div class = "form">
     <?php
     if (isset($_SESSION['message'])) {
       echo "<div id='error'>{$_SESSION['message']}</div>";
       unset($_SESSION['messsage']);
     }
     ?>
-    <form action="login_handler.php" method="post">
-      <div><label for="email">Email:<input type="textbox" id="email" name="email" /></div>
-        <div><label for="password">Password:<input type="password" id="password" name="password" /></div>
-          <div><input type="submit"/></div>
-	</form>
-  <div id = button>
-                <a href="register.php">Register Now</a>
-        </div>
+    <form class = "login-form" action="login_handler.php" method="post">
+      <input type="text" placeholder="email" id="email" name="email" />
+        <input type="password" placeholder="password" id="password" name="password" />
+          <input type="submit"/>
+                <p class = "message"> Not Registered? <a href="register.php">Create an account</a></p>
+                </form>
+  </div>
+  </div>
+
 	<?php
   include_once("footer.php")
 ?>

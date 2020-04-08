@@ -10,7 +10,6 @@ require_once('header.php');
 	
     <hr>
     <div>
-		<hr>
 <?php
 require_once('footer.php');
 ?>

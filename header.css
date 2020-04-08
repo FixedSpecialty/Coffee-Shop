@@ -1,4 +1,10 @@
-
+/***
+Lavender: #E8D7FF
+Picton Blue: #42CAFD
+Rich Black: #040201
+Seashell: #F9F3EF
+Vanilla: #F6EFA6
+***/
 .header {
   background-color: #f9f3ef;
   width: 100%;
@@ -6,6 +12,7 @@
   height: 100px;
 }
 .header h1 {
+  color: #040201;
   float: left;
   padding-left: 40px;
 
@@ -23,7 +30,6 @@
 	padding: 0;
 }
 .dropdownmenu ul {
-	background: gray;
 	list-style: none;
 	width: 100%;
 }
@@ -67,8 +73,10 @@ li:hover ul#submenu {
 	width: auto;
 }
 #submenu a:hover {
-	background: #DF4B05;
+  background: #040201;
+  color:#f9f3ef;
 }
 #submenu a {
-	background-color:#000000;
+  background-color:#f9f3ef;
+  color: #040201;
 }

@@ -7,8 +7,6 @@
 <?php
 require_once('header.php');
 ?>
-
-    <hr>
 <div >
     <img id = holderpic src="placeholder.png" height="400px" width="300px"/>
 <p>
@@ -19,7 +17,6 @@ require_once('header.php');
     <img src="placeholder.png" height="400px" width=100%/>
 </div>
 <div>
-	<hr>
 <?php
 require_once('footer.php');
 ?>

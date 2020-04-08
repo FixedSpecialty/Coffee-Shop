@@ -7,8 +7,6 @@
 <?php
 require_once('header.php');
 ?>
-
-    <hr>
 <div >
     <img id = holderpic src="placeholder.png" height="400px" width="300px"/>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris augue neque gravida in fermentum. Ornare suspendisse sed nisi lacus. Sed id semper risus in hendrerit gravida rutrum quisque non. At lectus urna duis convallis convallis tellus. Nulla aliquet enim tortor at auctor urna nunc id. Sapien pellentesque habitant morbi tristique senectus et netus et. Donec adipiscing tristique risus nec feugiat. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Lorem dolor sed viverra ipsum nunc aliquet. Cursus sit amet dictum sit amet justo donec enim. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Nibh ipsum consequat nisl vel pretium lectus. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.
@@ -24,7 +22,6 @@ require_once('header.php');
     <img src="placeholder.png" height="400px" width=100%/>
 </div>
 <div>
-	<hr>
 <?php
 require_once('footer.php');
 ?>
