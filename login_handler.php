@@ -16,7 +16,6 @@ $user = $stmt->fetch();
     header("Location: Profile.php");
     exit;
   } else {
-    $_SESSION['auth'] = false;
     $_SESSION['message'] = "Invalid email or password";
     header("Location: login.php");
   }

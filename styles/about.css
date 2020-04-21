@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+#holderpic {
+   float: left;
+   margin-right: 50px;
+   margin-bottom: 100px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+/* Make the image to responsive */
+.image {
+width: 100%;
+height: 40%;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+position: absolute;
+
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #040201;
+overflow: hidden;
+width: 100%;
+height: 100%;
+transform: scale(0);
+transition: .3s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.container:hover .overlay {
+transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+color: white;
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.img-wrapper1 {
+    position: relative;
+    padding-bottom: 300px;
+  }
+  
+  .img-wrapper1 div {
+    background-color: #42CAFD;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .img-wrapper1 .overlay1 {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .img-wrapper1 h2 {
+    margin: 0 0 .5em;
+    padding: 20px;
+    color: #040201;
+    font-weight: bolder;
+    background-color: white;
+    box-shadow: inset;
+  }
+ 
+  
+  .img-wrapper1 #headerbutton{
+    width: 200px;
+    height:100px;
+    background-color: white;
+  }

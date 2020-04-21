@@ -22,20 +22,16 @@
 <html>
 <header><title>Neckar Coffee</title></header>
 <head>
+
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-	<link rel="stylesheet" type="text/css" href="stock.css">
+  <link rel="stylesheet" type="text/css" href="styles/stock.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="js/stock.js"></script>
 </head>
 <?php
+$stock_page=1;
 require_once('header.php');
 ?>
-<hr>
-<?php
-    if (isset($_SESSION['errors'])) {
-      foreach ($_SESSION['errors'] as $error) {
-         echo "<div id='error'>{$error}</div>";
-      }
-      unset($_SESSION['errors']);
-    } ?>
   <body>
     <?php
     require_once('KLogger.php');
@@ -49,18 +45,35 @@ $stmt = $connection->prepare("SELECT first, last, email, admin FROM members WHER
 $stmt->execute([$_SESSION['id']]);
 $user = $stmt->fetch();
      if(!empty($user['admin'])) : ?>
-    <h1>Add Stock</h1>
+  
+
+      <div class = "stock-page">
+      
+      <div class = "form">
+      <?php
+    if (isset($_SESSION['errors'])) {
+      $logger->LogInfo("error in stock entry");
+      foreach ($_SESSION['errors'] as $error) {
+         echo "<div id='error'>{$error}<span class='close_error'>X</span></div>";
+      }
+      unset($_SESSION['errors']);
+    } ?>
+      <h1>ADD STOCK</h1>
     <form class = "form-css" method="POST" action="stock_handler.php" enctype="multipart/form-data">
-      <div class = "text-left">Origin: <input value="<?php echo $origin_preset; ?>" type="text" id="origin" name="origin"></div>
-      <div class = "text-left">Varietal: <input value="<?php echo $varietal_preset; ?>" type="text" id="varietal" name="varietal"></div>
-      <div class = "text-left">Roaster: <input value="<?php echo $roaster_preset; ?>" type="text" id="roaster" name="roaster"></div>
-      <div class = "text-left">Elevation: <input value="<?php echo $elevation_preset; ?>" type="text" id="elevation" name="elevation"></div>
-      <div class = "text-left">Notes: <input value="<?php echo $notes_preset?>" type="text" id="notes" name="notes"></div>
-      <div class = "text-left">Stock: <input value="<?php echo $stock_preset; ?>" type="text" id="stock" name="stock"></div>
-        <input type="submit" value="Submit">
-    </form>
+      <input  value="<?php echo $origin_preset; ?>" type="text" placeholder="origin" id="origin" name="origin" />
+        <input value="<?php echo $varietal_preset; ?>" type="text" placeholder="varietal" id="varietal" name="varietal" />
+        <input value="<?php echo $roaster_preset; ?>" type="text" placeholder="roaster" id="roaster" name="roaster" />
+        <input value="<?php echo $elevation_preset; ?>" type="text" placeholder="elevation" id="elevation" name="elevation" />
+        <input value="<?php echo $notes_preset?>" type="text" placeholder="notes" id="notes" name="notes" />
+        <input value="<?php echo $stock_preset; ?>" type="text" placeholder="stock" id="stock" name="stock" />
+          <input type="submit" value="Submit"/>
+                </form>
+  </div>
+  </div>
      <?php endif;  ?>
-     <?php endif;  ?>
+     <?php else:  ?>
+      <div id ="noadmin">BROWSE<br>OUR<br>STOCK</div>
+     <?php endif; ?>
         <table class = "table-fill">
       <thead>
         <tr>
@@ -73,7 +86,27 @@ $user = $stmt->fetch();
        </tr>
       </thead>
       <tbody class = "table-hover">
+        
       <?php
+      if(isset($_SESSION['id'])) {
+  
+        $id = $_SESSION['id'];
+        $connection = $Dao->getConnection();
+      $stmt = $connection->prepare("SELECT first, last, email, admin FROM members WHERE id = ?");
+      $stmt->execute([$_SESSION['id']]);
+      $user = $stmt->fetch();
+           if(!empty($user['admin'])) {
+            $lines = $dao->getStock();
+          if (is_null($lines)) {
+            echo "There was an error.";
+      } else {
+             foreach ($lines as $line) {
+               echo "<tr><td>{$line['origin']}</td><td>{$line['varietal']}</td><td>{$line['roaster']}</td><td>{$line['elevation']}</td><td>{$line['notes']}</td><td>{$line['stock']}</td><td class='delete'><a href='delete_stock.php?id={$line['id']}'>X</a></td></tr>";
+              }
+          }
+        }
+      }
+        else{
          $lines = $dao->getStock();
   if (is_null($lines)) {
         echo "There was an error.";
@@ -82,11 +115,12 @@ $user = $stmt->fetch();
            echo "<tr><td class = \"text-left\">{$line['origin']}</td><td class = \"text-left\">{$line['varietal']}</td><td class =\"text-left\">{$line['roaster']}</td><td class = \"text-left\">{$line['elevation']}</td><td class = \"text-left\">{$line['notes']}</td><td class = \"text-left\">{$line['stock']}</td></tr>";
           }
       }
+    }
       ?>
       </tbody>
     </table>
         <div>
-          <hr>
+
 <?php
 require_once('footer.php');
 ?>

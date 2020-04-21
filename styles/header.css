@@ -5,6 +5,18 @@ Rich Black: #040201
 Seashell: #F9F3EF
 Vanilla: #F6EFA6
 ***/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+body{
+font-family: "Roboto", sans-serif;
+}
+html{
+	background-color: white;
+}
+@media (max-width: 1100px) {
+	.header h1 {
+	display: none;
+	}
+	}
 .header {
   background-color: #f9f3ef;
   width: 100%;
@@ -15,6 +27,7 @@ Vanilla: #F6EFA6
   color: #040201;
   float: left;
   padding-left: 40px;
+  font-weight: bolder;
 
 }
 .menucontainer {
@@ -52,10 +65,15 @@ Vanilla: #F6EFA6
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 }
+
 .dropdownmenu li:hover a {
   background:  #f9f3ef;
   color: #040201;
 }
+.dropdownmenu .highlighted {
+	background: gray;
+	color: #fff;
+ }
 #submenu {
 	left: 0;
 	opacity: 0;

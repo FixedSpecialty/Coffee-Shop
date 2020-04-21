@@ -1,5 +1,5 @@
 <footer class = "footer">
-   <link rel="stylesheet" type="text/css" href="footer.css">
+   <link rel="stylesheet" type="text/css" href="styles/footer.css">
    
   <div class="copyright">
     <p>&copy 2020 - Coffeeshop</p>

@@ -9,7 +9,7 @@ include('Dao.php');
 
   // validate
   $origin = $_POST['origin'];
-  if(!preg_match('/^[A-Za-z\s]{0,20}$/', $_POST['origin'])) {
+  if(!preg_match('/^[A-Za-z\s]{0,20}$/', $_POST['origin'])&& !strlen($_POST['origin']) ==  0) {
     $errors[] = "Error, letters only in the origin";
   }
 
@@ -17,7 +17,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an origin";
   }
 
-  if(!preg_match('/^[A-Za-z0-9\s]{0,20}+$/', $_POST['origin'])) {
+  if(!preg_match('/^[A-Za-z0-9\s]{0,20}+$/', $_POST['origin']) && !strlen($_POST['varietal']) ==  0) {
     $errors[] = "Error, letters and numbers only in the origin";
   }
   if (strlen($_POST['varietal']) > 20) {
@@ -28,7 +28,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an varietal";
   }
 
-  if(!preg_match('/^[A-Za-z0-9\s]{0,30}+$/', $_POST['roaster'])) {
+  if(!preg_match('/^[A-Za-z0-9\s]{0,30}+$/', $_POST['roaster'])&& !strlen($_POST['roaster']) ==  0) {
     $errors[] = "Error, letters and numbers only for roaster";
   }
 
@@ -36,7 +36,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an roaster";
   }
 
-  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['elevation']))
+  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['elevation'])&& !strlen($_POST['elevation']) ==  0)
 {
   $errors[] = "Error, elevation cannot have special chars";
 }
@@ -44,7 +44,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an elevation";
   }
 
-  if (!preg_match('/^[0-9A-Za-z\.\,\s]{0,256}$/', $_POST['notes']))
+  if (!preg_match('/^[0-9A-Za-z\.\,\s]{0,256}$/', $_POST['notes']) && !strlen($_POST['notes']) ==  0)
 {
   $errors[] = "Error, notes cannot have special chars besides .,";
 }
@@ -53,7 +53,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an notes";
   }
 
-  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['stock']))
+  if (!preg_match('/^[0-9\,\s]+[A-Za-z]{0,20}$/', $_POST['stock'])&& !strlen($_POST['stock']) ==  0)
 {
   $errors[] = "Error, stock cannot have special chars";
 }

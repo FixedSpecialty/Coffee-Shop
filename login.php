@@ -4,13 +4,18 @@
 <head>
      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
      <link rel="stylesheet" type="text/css" href="login.css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="js/login.js"></script>
 </head>
 <?php
+$login_page=1;
 require_once('header.php');
 ?>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="comment.css">
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
   </head>
   <body>
     <div class = "login-page">
@@ -33,6 +38,7 @@ require_once('header.php');
 	<?php
   include_once("footer.php")
 ?>
+
   </body>
 
 </html>
