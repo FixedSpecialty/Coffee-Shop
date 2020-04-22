@@ -17,7 +17,7 @@ include('Dao.php');
     $errors[] = "Error, please enter an origin";
   }
 
-  if(!preg_match('/^[A-Za-z0-9\s]{0,20}+$/', $_POST['origin']) && !strlen($_POST['varietal']) ==  0) {
+  if(!preg_match('/^[A-Za-z0-9\s]{0,20}+$/', $_POST['varietal']) && !strlen($_POST['varietal']) ==  0) {
     $errors[] = "Error, letters and numbers only in the origin";
   }
   if (strlen($_POST['varietal']) > 20) {
@@ -46,7 +46,7 @@ include('Dao.php');
 
   if (!preg_match('/^[0-9A-Za-z\.\,\s]{0,256}$/', $_POST['notes']) && !strlen($_POST['notes']) ==  0)
 {
-  $errors[] = "Error, notes cannot have special chars besides .,";
+  $errors[] = "Error, notes cannot have special chars";
 }
 
   if (strlen($_POST['notes']) ==  0) {
